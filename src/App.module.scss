@@ -1,0 +1,23 @@
+@import '~/assets/scss/util';
+
+.wrap {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+	background-color: $color-background;
+}
+.start {
+	position: absolute;
+	top: 200px;
+	right: 0;
+	width: 100px;
+	height: 40px;
+	background-color: #e516e5;
+}
+.instrument {
+	padding-top: 50px;
+}
+.problem {
+	margin-top: 50px;
+}
