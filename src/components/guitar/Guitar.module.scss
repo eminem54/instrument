@@ -1,0 +1,29 @@
+.wrap {
+  display: inline-block;
+  background-color: #000;
+}
+
+.line {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    height: 1px;
+    background-color: #fff;
+    content: '';
+  }
+
+  &:last-of-type::after {
+    height: 4px;
+  }
+  &:nth-last-of-type(2)::after {
+    height: 3px;
+  }
+  &:nth-last-of-type(3)::after {
+    height: 2px;
+  }
+}
