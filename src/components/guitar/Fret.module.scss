@@ -1,0 +1,54 @@
+.fret {
+  position: relative;
+  width: 70px;
+  height: 50px;
+  background-color: transparent;
+  color: transparent;
+  font-size: 20px;
+  z-index: 5;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 1px;
+    width: 2px;
+    background-color: silver;
+    z-index: 10;
+    content: '';
+  }
+
+  &:first-of-type {
+    &::after {
+      width: 3px;
+      background-color: gold;
+    }
+  }
+
+  &:last-of-type .mark {
+    display: none;
+  }
+
+  &[aria-pressed='true'] {
+    background-color: rgba(#ff0, 0.5);
+    color: greenyellow;
+  }
+}
+
+.mark {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #000;
+}
+.line {
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  transform: translateX(-50%);
+}
